@@ -1,0 +1,83 @@
+footer {
+    margin-top: auto;
+}
+
+.efect {
+    outline: none;
+    text-decoration: none;
+    position: relative;
+    font-size: 1.5em;
+    line-height: 1;
+    color: #9e9ba4;
+    display: inline-block;
+}
+
+.efect:visited {
+    text-decoration: none;
+}
+
+
+/* Nukun */
+
+.efect-infoexpo {
+    color: #3F5364;
+    font-weight: 900;
+    overflow: hidden;
+    padding: 4px 0;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.efect-infoexpo:hover {
+    color: #1F9BDE;
+    text-decoration: none;
+}
+
+.efect-infoexpo::before,
+.efect-infoexpo::after {
+    content: '';
+    position: absolute;
+    width: 52%;
+    height: 2px;
+    background: #75BA00;
+    bottom: 0;
+    left: 13%;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.efect-infoexpo::after {
+    background: #ACD07A;
+    -webkit-transform: translate3d(-300%, 0, 0) scale3d(0, 1, 1);
+    transform: translate3d(-300%, 0, 0) scale3d(0, 1, 1);
+}
+
+.efect-infoexpo:hover::before {
+    -webkit-transform: translate3d(300%, 0, 0) scale3d(0, 1, 1);
+    transform: translate3d(300%, 0, 0) scale3d(0, 1, 1);
+}
+
+.efect-infoexpo:hover::after {
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+}
+
+.efect-infoexpo span {
+    color: #1F9BDE;
+    display: inline-block;
+    position: relative;
+    -webkit-transform: perspective(1000px) rotate3d(0, 1, 0, 0deg);
+    transform: perspective(1000px) rotate3d(0, 1, 0, 0deg);
+    -webkit-transition: -webkit-transform 0.5s, color 0.5s;
+    transition: transform 0.5s, color 0.5s;
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.efect-infoexpo:hover span {
+    color: #3F5364;
+    -webkit-transform: perspective(1000px) rotate3d(0, 1, 0, 180deg);
+    transform: perspective(1000px) rotate3d(0, 1, 0, 180deg);
+}
